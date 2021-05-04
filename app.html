@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+      *{
+        margin-bottom:10px !important;
+        font-size: 15px !important;
+      }
+      .alert {
+        background: green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="text-center mt-5" style="font-size: 30px !important;">Calculator App</h3>
+
+    <div class="row">
+      <div class="col-8">
+          <form id="cal" class="form-inline mx-auto" style="width: 280px">
+            <label for="Number One">First Number</label>
+            <input type="text" id="op1" placeholder="First Number" class="u-full-width" name="num1" />
+    
+            <label for="Number Two">Second Number</label>
+            <input type="text" id="op2" placeholder="Second Number" class="u-full-width" name="num2" />
+    
+            <label for="Operation">Operation</label>
+            <select class="u-full-width" name="operation" id="op">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+              <option value=">">></option>
+              <option value="<"><</option>
+              <option value="==">==</option>
+              <option value="<="><=</option>
+              <option value=">=">>=</option>
+              <option value="%">%</option>
+              <option value="|">|</option>
+              <option value="&">&</option>
+              <option value="^">^</option>
+              <option value="~">~</option>
+            </select>
+    
+            <button type="button" class="btn btn-outline-primary" onclick="calculate();">Calculate</button>
+    
+            <br />
+          </form>
+          <div class="alert mx-auto" style="width: 280px">
+            <ul id="result">
+    
+            </ul>
+          </div>
+      </div>
+      <div class="col-4">
+        <div class="history mx-auto">
+            <h2 style="font-size: 28px !important;">Your Search History</h2>
+            click on the usernames to delete them.
+            <ul id="updatedhistory" class="list-group mx-auto mb-5">
+    
+            </ul>
+        </div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
