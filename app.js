@@ -4,7 +4,12 @@ function calculate()
     let op2 = document.getElementById('op2').value;
     let op = document.getElementById('op').value;
     
-    if((op1=="1" || op1=="2" || op1=="3" || op1=="4" || op1=="5" || op1=="6" || op1=="7" || op1=="8" || op1=="9" || op1=="0") && (op2=="1" || op2=="2" || op2=="3" || op2=="4" || op2=="5" || op2=="6" || op2=="7" || op2=="8" || op2=="9" || op2=="0"))
+    if(isNaN(op1) || isNaN(op2))
+    {
+        alert("Enter only interger values.");
+        return;
+    }
+    else
     {
         op1=Number(op1);
         op2=Number(op2);
@@ -93,11 +98,6 @@ function calculate()
             localStorage.setItem(op+String(op2),op+String(op2)+"="+ans1);
         }
         updatedhistory();
-    }
-    else
-    {
-        alert("Enter only interger values.");
-        return;
     }
 }
 
